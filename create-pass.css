@@ -1,0 +1,94 @@
+/* Main container for password box */
+#pass-box {
+    margin: auto;
+    margin-top: 10vh; /* Change to a percentage to help with responsiveness */
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%; /* Use a percentage to allow for flexibility */
+    max-width: 400px; /* Set a max width for larger screens */
+    height: auto; /* Set height to auto for better flexibility */
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 2px 4px 8px rgba(10, 10, 10, 0.9);
+}
+
+/* Input fields styling */
+.pass-inp {
+    width: 90%; /* Change to 100% for consistency */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+/* Submit button styling */
+#sub-button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    background-color: #004d4d;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 1px 2px 2px black;
+    transition-duration: 1s;
+    font-weight: bold;
+}
+
+/* Button hover effect */
+#sub-button:hover {
+    box-shadow: 2px 4px 4px black;
+}
+
+/* Header styling */
+#pass-box h3 {
+    color: #004d4d;
+    font-weight: bolder;
+    font-size: x-large;
+}
+
+/* Input box for password and confirmation */
+.input-box {
+    position: relative; /* Keep the positioning for the eye icon */
+    margin-bottom: 20px;
+}
+
+/* Eye icon styling */
+.input-box span {
+    position: absolute;
+    right: 10px; /* Position the span inside the input box */
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    #pass-box {
+        width: 90%; /* Make it wider for smaller screens */
+        padding: 15px; /* Adjust padding */
+    }
+
+    .pass-inp, 
+    #sub-button {
+        font-size: 14px; /* Smaller font size for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    #pass-box {
+        margin-top: 20vh; /* Adjust margin for smaller screens */
+    }
+
+    #pass-box h3 {
+        font-size: large; /* Smaller heading size for mobile */
+    }
+}

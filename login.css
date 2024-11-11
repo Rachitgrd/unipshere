@@ -1,0 +1,110 @@
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.left, .right {
+    flex: 1;
+}
+
+.left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left img {
+    max-width: 100%;
+    max-height: 100%;
+    margin-left: 20px; /* Adjust the margin as needed */
+    animation: slideDown 0.8s ease forwards; /* Apply the slide down animation */
+    animation-delay: 0.4s; /* Delay to stagger the animations */
+    opacity: 0; /* Ensure it's initially invisible for the animation */
+}
+
+.right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px; /* Set a fixed width for the login box */
+    height: auto; /* Adjust height to fit content */
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 2px 4px 8px rgba(10, 10, 10, 0.9);
+    animation: slideDown 0.8s ease forwards; /* Apply the slide down animation */
+    opacity: 0; /* Ensure it's initially invisible for the animation */
+}
+
+.loginbox h3 {
+    color: #004d4d;
+    font-weight: bolder;
+    font-size: x-large;
+}
+
+.input-box {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+
+.input-box:hover {
+    border-color: #004d4d;
+}
+
+.login-button, .new-acc {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #004d4d;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 1px 2px 2px black;
+    transition-duration: 1s;
+    font-weight: bold;
+}
+
+.login-button:hover, .new-acc:hover {
+    box-shadow: 2px 4px 4px black;
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-100px); /* Start from above the viewport */
+        opacity: 0; /* Start as invisible */
+    }
+    100% {
+        transform: translateY(0); /* End at its original position */
+        opacity: 1; /* Fully visible */
+    }
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+    }
+
+    .left, .right {
+        flex: none; /* Reset flex property */
+        width: 100%; /* Full width for mobile devices */
+    }
+
+    .loginbox {
+        width: 90%; /* Make the width responsive for mobile */
+    }
+}
